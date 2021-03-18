@@ -8,16 +8,17 @@ const InputField = ({ form, name, placeholder, disabled, handleChange }) => {
         <Controller
             name={name}
             control={form.control}
-            render={({ onChange, value }) => (
-                <TextField
+            render={({ onChange, value }) => {
+                handleChange(value)
+                return <TextField
                     fullWidth
                     onChange={onChange}
                     variant='outlined'
-                    value={handleChange(value)}
+                    value={value}
                     disabled={disabled}
                     placeholder={placeholder}
                 />
-            )}
+            }}
         />
     );
 };

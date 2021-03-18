@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import InputField from '../inputField';
 
 const ChatForm = ({ onSubmit }) => {
+
     const [progress, setProgress] = useState(0);
 
     const form = useForm({
@@ -21,8 +22,8 @@ const ChatForm = ({ onSubmit }) => {
 
     const handleSubmitForm = async (value) => {
         await onSubmit(value)
+        form.reset()
     }
-
 
     return (
         <div>
