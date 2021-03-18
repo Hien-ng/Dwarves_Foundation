@@ -7,7 +7,7 @@ const ChatBox = () => {
     const dispatch = useDispatch()
     const handleSubmit = (value) => {
         if (value.chatbox === '') return
-        const action = increase(value.chatbox.slice(0, 50))
+        const action = increase(value.chatbox)
         dispatch(action)
     }
 

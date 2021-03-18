@@ -8,7 +8,7 @@ const MessagesDisplay = () => {
         <>
             {messages.map((message, index) => (
                 <div className='message-me' key={index}>
-                    <span >{message}</span>
+                    <span>{message.slice(0, 50)} <mark>{message.slice(50)}</mark></span>
                 </div>
             ))}
         </>
