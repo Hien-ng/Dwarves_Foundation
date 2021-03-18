@@ -1,0 +1,42 @@
+@import "_variables";
+@import "_function";
+
+.App {
+  min-height: 100vh;
+  background-color: $primary;
+  color: $primary_color;
+  flex: 1;
+}
+
+.border-width {
+  &__left {
+    border-left: 1px solid $primary_border;
+  }
+
+  &__right {
+    border-right: 1px solid $primary_border;
+  }
+
+  &__bottom {
+    border-bottom: 1px solid $primary_border;
+  }
+
+  &__top {
+    border-top: 1px solid $primary_border;
+  }
+}
+
+.d-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-items {
+  display: flex;
+  align-items: center;
+}
+
+.h-full {
+  height: 100vh;
+}
